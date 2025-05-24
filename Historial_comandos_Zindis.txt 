@@ -1,0 +1,66 @@
+cd
+pwd
+cd repogit
+git clone git@github.com:Lionel451/TP_AySO.git
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/os-release
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i home_url /etc/os-release
+grep -i Home_url /etc/os-release > datos_url.txt
+cat datos_url.txt 
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git config --global user.email "lionelzindis@gmail.com"
+git config --global user.name "Lionel451"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt
+git status
+git add datos_usuario.txt
+git status
+git commit -m "feat: Añadiendo información de CPU"
+cat << EOF >> README.md
+Alumno: Lionel Jorge Zindis
+División: 117
+Turno: Mañana
+EOF
+
+cat README.md
+git add README.md datos_usuarios.txt
+git status
+git commit -m "ADD: Añadiendo Readme y datos de usuario" 
+git add README.md datos_usuario.txt
+git status
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git status
+git push
+cd
+pwd
+mkdir -p {material1,material2}/{uni1,uni2,uni3}
+tree
+sudo apt install tree
+tree
+sudo snap install tree
+tree
+cd TP_AySO
+cd
+cd repogit/TP_AySO/
+pwd
+cat << 'EOF' > script_dir.sh
+#!/bin/bash
+mkdir -p {material1,material2}/{uni1,uni2,uni3}
+EOF
+
+chmod +x script_dir.sh
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
